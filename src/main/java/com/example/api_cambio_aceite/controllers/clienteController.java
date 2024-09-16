@@ -9,11 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/clientes")
-public class ClienteController {
+public class clienteController {
 
     private final ClienteService clienteService;
 
-    public ClienteController(ClienteService clienteService) {
+    public clienteController(ClienteService clienteService) {
         this.clienteService = clienteService;
     }
 
@@ -30,8 +30,8 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<Clientes> createCliente(@RequestBody Clientes clientes){
-        Clientes nuevoClientes = clienteService.saveCliente(clientes);
-        return ResponseEntity.ok(nuevoClientes);
+        Clientes nuevoCliente = clienteService.saveCliente(clientes);
+        return ResponseEntity.ok(nuevoCliente);
     }
 
     @PutMapping("/{id}")

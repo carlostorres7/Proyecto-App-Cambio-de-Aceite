@@ -10,7 +10,7 @@ public class Motocicletas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
     private String placa;
     private String marca;
@@ -18,19 +18,22 @@ public class Motocicletas {
     private int cliente_id;
 
     public Motocicletas(int id, String placa, String marca, String referencia, int cliente_id) {
-        Id = id;
+        this.id = id;
         this.placa = placa;
         this.marca = marca;
         this.referencia = referencia;
         this.cliente_id = cliente_id;
     }
 
+    public Motocicletas() {
+    }
+
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getPlaca() {

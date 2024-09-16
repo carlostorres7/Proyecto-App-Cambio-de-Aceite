@@ -31,18 +31,18 @@ public class ClienteService {
                 .orElseThrow(()-> new RuntimeException("Cliente no encontrado"));
     }
 
-    public Clientes updateCliente(Long id, Clientes clientesActualizado){
-        Clientes clientesExistente = clienteRepository.findById(id).
+    public Clientes updateCliente(Long id, Clientes clienteActualizado){
+        Clientes clienteExistente = clienteRepository.findById(id).
                 orElseThrow(()-> new RuntimeException("Cliente no encontrado"));
 
-        clientesExistente.setNombre_uno(clientesActualizado.getNombre_uno());
-        clientesExistente.setNombre_dos(clientesActualizado.getNombre_dos());
-        clientesExistente.setApellido_uno(clientesActualizado.getApellido_uno());
-        clientesExistente.setApellido_dos(clientesActualizado.getApellido_dos());
-        clientesExistente.setTelefono(clientesActualizado.getTelefono());
-        clientesExistente.setEmail(clientesActualizado.getEmail());
+        clienteExistente.setNombre_uno(clienteActualizado.getNombre_uno());
+        clienteExistente.setNombre_dos(clienteActualizado.getNombre_dos());
+        clienteExistente.setApellido_uno(clienteActualizado.getApellido_uno());
+        clienteExistente.setApellido_dos(clienteActualizado.getApellido_dos());
+        clienteExistente.setTelefono(clienteActualizado.getTelefono());
+        clienteExistente.setEmail(clienteActualizado.getEmail());
 
-        return clienteRepository.save(clientesExistente);
+        return clienteRepository.save(clienteExistente);
     }
 
 

@@ -1,11 +1,9 @@
 package com.example.api_cambio_aceite.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name="Aceites")
 public class Aceites {
 
     @Id
@@ -21,6 +19,10 @@ public class Aceites {
         this.marca = marca;
         this.referencia = referencia;
         this.categoria = categoria;
+    }
+
+    public Aceites(){
+
     }
 
     public int getId() {
